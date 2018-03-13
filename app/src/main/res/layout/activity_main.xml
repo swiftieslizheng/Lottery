@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+    <include layout="@layout/title_bar_layout"/>
+<FrameLayout
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+</FrameLayout>
+
+<RadioGroup
+    android:id="@+id/rg_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/space_xs"
+    android:paddingBottom="@dimen/space_xs"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorButtom"
+    android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/rb_follow"
+        style="@style/MainButtonStyle"
+        android:drawableTop="@drawable/follow_button_selector"
+        android:text="@string/str_follow"/>
+    <RadioButton
+        android:id="@+id/rb_find"
+        style="@style/MainButtonStyle"
+        android:drawableTop="@drawable/find_button_selector"
+        android:text="@string/str_find"/>
+    <RadioButton
+        android:id="@+id/rb_person"
+        style="@style/MainButtonStyle"
+        android:drawableTop="@drawable/person_button_selector"
+        android:text="@string/str_person"/>
+</RadioGroup>
+</LinearLayout>

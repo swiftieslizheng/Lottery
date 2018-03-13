@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lottery</string>
+    <string name="str_follow">已关注</string>
+    <string name="str_find">发现</string>
+    <string name="str_person">我</string>
+
+</resources>
