@@ -1,7 +1,19 @@
 <resources>
     <string name="app_name">Lottery</string>
     <string name="str_follow">已关注</string>
+    <string name="str_btn_follow">关注</string>
     <string name="str_find">发现</string>
     <string name="str_person">我</string>
+    <string name="str_name">赌神一号</string>
+    <string name="str_introduction">游戏介绍</string>
+    <string name="str_publish">游戏公告</string>
+    <string name="str_posibility">赔率介绍</string>
+    <string name="str_history">下注历史</string>
+    <string name="str_btn_send_message">发消息</string>
+    <string name="str_btn_access">进入游戏</string>
+    <string name="str_detail">查分明细</string>
+    <string name="str_position">加拿大</string>
+    <string name="str_go_follow">去关注</string>
+    <string name="str_follow_content">赌神一号：无视赔半，4.6.2.1，每周2，4...</string>
 
 </resources>

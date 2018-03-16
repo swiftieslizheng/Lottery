@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lizheng.lottery.view.activity.FollowDetailActivity">
+    <include layout="@layout/title_bar_layout"/>
+    <RelativeLayout
+        android:layout_margin="@dimen/space_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_head_detail"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginRight="@dimen/space_m"
+            style="@style/detail_head_sculpture_style"/>
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_head_detail"
+            style="@style/global_name_style"
+            android:text="@string/str_name"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_margin="@dimen/space_s"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_xl"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:text="@string/str_introduction"
+                style="@style/global_name_style" />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_m"
+                android:text="@string/str_follow_content"
+                style="@style/global_content_style" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="@dimen/space_s"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_xl"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:text="@string/str_publish"
+                style="@style/global_name_style" />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_m"
+                android:text="@string/str_follow_content"
+                style="@style/global_content_style" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_margin="@dimen/space_s"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_xl"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:text="@string/str_posibility"
+                style="@style/global_name_style" />
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/space_m"
+                android:text="@string/str_follow_content"
+                style="@style/global_content_style" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/space_m"
+        android:layout_marginBottom="@dimen/space_s"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_xl"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:text="@string/str_history"
+            android:layout_marginLeft="@dimen/space_s"
+            style="@style/global_name_style" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_m"
+            android:text="@string/str_follow_content"
+            style="@style/global_content_style" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/space_s"
+        android:layout_marginBottom="@dimen/space_s"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_xl"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:text="@string/str_detail"
+            android:layout_marginLeft="@dimen/space_s"
+            style="@style/global_name_style" />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/space_m"
+            android:text="@string/str_follow_content"
+            style="@style/global_content_style" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_follow"
+        android:visibility="gone"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="@dimen/space_s"
+        android:layout_marginLeft="@dimen/space_m"
+        android:layout_marginRight="@dimen/space_m"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_m"
+        android:text="@string/str_btn_follow"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_access"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="@dimen/space_s"
+        android:layout_marginLeft="@dimen/space_xxxl"
+        android:layout_marginRight="@dimen/space_xxxl"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_m"
+        android:text="@string/str_btn_access"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_send_message"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="@dimen/space_m"
+        android:layout_marginLeft="@dimen/space_xxxl"
+        android:layout_marginRight="@dimen/space_xxxl"
+        android:layout_width="match_parent"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/txt_m"
+        android:text="@string/str_btn_send_message"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

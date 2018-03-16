@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_head_follow"
+        style="@style/global_head_sculpture_style"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="@dimen/space_s"/>
+    <TextView
+        android:id="@+id/tv_name"
+        style="@style/global_name_style"
+        android:layout_marginTop="@dimen/space_s"
+        android:layout_marginLeft="@dimen/space_s"
+        android:layout_toRightOf="@id/iv_head_follow"
+        android:text="@string/str_name"/>
+    <TextView
+        android:id="@+id/tv_follow_content"
+        style="@style/global_content_style"
+        android:layout_toRightOf="@id/iv_head_follow"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="@dimen/space_xs"
+        android:layout_marginLeft="@dimen/space_s"
+        android:text="@string/str_follow_content"/>
+    <TextView
+        android:id="@+id/tv_follow_position"
+        style="@style/global_content_style"
+        android:text="@string/str_position"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/space_xs"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>
+    <View
+        android:background="@color/colorContent"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

@@ -18,5 +18,31 @@
         <item name="android:textSize">@dimen/txt_s</item>
         <item name="android:gravity">center</item>
     </style>
-
+    <!-- 全局头像的style -->
+<style name="global_head_sculpture_style">
+<item name="android:layout_width">@dimen/space_xxl</item>
+<item name="android:layout_height">@dimen/space_xxl</item>
+<item name="android:scaleType">centerCrop</item>
+</style>
+    <!-- 详情头像的style -->
+    <style name="detail_head_sculpture_style">
+    <item name="android:layout_width">@dimen/space_xxxl</item>
+    <item name="android:layout_height">@dimen/space_xxxl</item>
+    <item name="android:scaleType">centerCrop</item>
+    </style>
+    <!-- 全局名字的style -->
+    <style name="global_name_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_m</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+    <!-- 全局小字（内容）的style -->
+    <style name="global_content_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/txt_s</item>
+        <item name="android:textColor">@color/colorContent</item>
+    </style>
 </resources>
