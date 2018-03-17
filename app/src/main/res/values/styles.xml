@@ -45,4 +45,41 @@
         <item name="android:textSize">@dimen/txt_s</item>
         <item name="android:textColor">@color/colorContent</item>
     </style>
+    <!--登陆界面的EditText-->
+    <style name="activity_login_et">
+        <item name="android:textSize">@dimen/txt_m</item>>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/colorTitle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--登陆界面的ImageView-->
+    <style name="activity_login_img">
+        <item name="android:layout_centerVertical">true</item>>
+        <item name="android:padding">@dimen/space_xs</item>>
+        <item name="android:layout_marginLeft">@dimen/space_m</item>
+        <item name="android:layout_width">@dimen/space_xl</item>
+        <item name="android:layout_height">@dimen/space_xl</item>
+    </style>
+    <!--登陆界面的登陆文字-->
+    <style name="activity_login_tx">
+        <item name="android:background">@null</item>
+        <item name="android:textSize">@dimen/txt_m</item>
+        <item name="android:textColor">@color/colorTitle</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--注册界面的LinearLayout-->
+    <style name="fragment_register">
+        <item name="android:layout_marginTop">@dimen/space_xxl</item>
+        <item name="android:layout_marginLeft">@dimen/space_xxl</item>
+        <item name="android:layout_marginRight">@dimen/space_xxl</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/edit_text_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/space_xxl</item>
+    </style>
+
+
 </resources>

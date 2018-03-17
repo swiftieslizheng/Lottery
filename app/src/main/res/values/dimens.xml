@@ -17,4 +17,6 @@
     <dimen name="space_xl">36dp</dimen>
     <dimen name="space_xxl">48dp</dimen>
     <dimen name="space_xxxl">72dp</dimen>
+    <dimen name="space_vl">112dp</dimen>
+    <dimen name="space_vlx">132dp</dimen>
 </resources>

@@ -9,4 +9,8 @@
     <color name="colorBlack">#000000</color>
     <color name="colorContent">#CACACA</color>
     <color name="colorBackground">#F2F2F2</color>
+    <color name="colorBackgroundLine">#535252</color>
+    <color name="colorButtonBackground">#3b3b3b</color>
+
+    <color name="colorBule">#679ebb</color>
 </resources>
