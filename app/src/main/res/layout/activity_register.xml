@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        style="@style/fragment_register">
+        <ImageView
+            android:src="@mipmap/ic_head"
+            style="@style/activity_login_img"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/et_name_register"
+                android:hint="@string/str_hint_register_name"
+                android:inputType="textPersonName"
+                style="@style/activity_login_et" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        style="@style/fragment_register">
+        <ImageView
+            android:src="@mipmap/ic_lock"
+            style="@style/activity_login_img"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/et_password_register"
+                android:hint="@string/str_hint_register_password"
+                android:inputType="textPassword"
+                style="@style/activity_login_tx" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        style="@style/fragment_register">
+        <ImageView
+            android:src="@mipmap/ic_lock"
+            style="@style/activity_login_img"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/et_again_password_register"
+                android:hint="@string/str_hint_register_password_again"
+                android:inputType="textPassword"
+                style="@style/activity_login_tx" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        style="@style/fragment_register">
+        <ImageView
+            android:src="@mipmap/ic_head"
+            style="@style/activity_login_img"/>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/et_phone_register"
+                android:hint="@string/str_hint_register_phoneNumber"
+                android:inputType="phone"
+                style="@style/activity_login_tx" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        style="@style/fragment_register">
+        <Button
+            android:id="@+id/btn_get_code_register"
+            android:background="@drawable/edit_text_bg"
+            android:text="@string/str_hint_register_getCheckCode"
+            android:layout_width="@dimen/space_xxxl"
+            android:layout_height="@dimen/space_xxl"
+            />
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/et_code_register"
+                android:layout_marginLeft="@dimen/space_m"
+                android:inputType="number"
+                android:hint="@string/str_hint_register_code"
+                style="@style/activity_login_tx" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/go_login"
+            android:layout_alignParentRight="true"
+            android:text="@string/str_register_goLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</LinearLayout>

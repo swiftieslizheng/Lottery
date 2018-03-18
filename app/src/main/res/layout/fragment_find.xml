@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/colorContent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:luckpan="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/space_l"
+        android:layout_marginLeft="@dimen/space_xl"
+        android:layout_marginRight="@dimen/space_xl"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_xl">
+        <ImageView
+            android:layout_marginLeft="@dimen/space_s"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_search"
+            android:layout_width="@dimen/space_l"
+            android:layout_height="@dimen/space_l" />
+
+        <TextView
+            android:layout_marginLeft="@dimen/space_s"
+            android:gravity="center_vertical"
+            style="@style/activity_login_tx"
+            android:text="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_marginTop="@dimen/space_l"
+        android:layout_weight="1.5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_card"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/space_vl"
+                android:layout_height="@dimen/space_vlx" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/space_l"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:src="@mipmap/ic_card"
+                android:scaleType="fitXY"
+                android:layout_width="@dimen/space_vl"
+                android:layout_height="@dimen/space_vlx" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <!--<ScrollView-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:tools="http://schemas.android.com/tools"-->
+            <!--xmlns:luckpan="http://schemas.android.com/apk/res-auto"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:scrollbars="none"-->
+            <!--android:background="#7CD8E3"-->
+            <!--&gt;-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.lizheng.lottery.view.fragment.LuckPanLayout
+                    android:id="@+id/luckpan_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/transparent"
+                    >
+                    <com.lizheng.lottery.view.fragment.RotatePan
+                        android:id="@+id/rotatePan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        luckpan:pannum="8"
+                        luckpan:names="@array/names"
+                        luckpan:icons="@array/icons"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/go"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/node"
+                        android:clickable="true"
+                        android:onClick="rotation"
+                        android:tag="startbtn"
+                        />
+                </com.lizheng.lottery.view.fragment.LuckPanLayout>
+            </RelativeLayout>
+        <!--</ScrollView>-->
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_xs">
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

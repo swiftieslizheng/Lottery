@@ -31,4 +31,5 @@
     <string name="str_hint_register_phoneNumber">请输入你的手机号码...</string>
     <string name="str_hint_register_code">请输入你的验证码...</string>
     <string name="str_register_goLogin">已有账号，去登陆</string>
+    <string name="str_register_go">已有sssssss账号，去登陆</string>
 </resources>

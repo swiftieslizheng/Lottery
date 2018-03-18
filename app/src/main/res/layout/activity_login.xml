@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorBule"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/colorWhite"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/space_xl"
+        android:layout_marginRight="@dimen/space_xl"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+        <TextView
+            android:layout_marginTop="@dimen/space_m"
+            android:gravity="center"
+            android:text="@string/str_login_name"
+            android:layout_width="match_parent"
+            style="@style/activity_login_tx" />
+        <RelativeLayout
+            android:background="@color/colorWhite"
+            android:layout_marginTop="@dimen/space_s"
+            android:layout_marginRight="@dimen/space_l"
+            android:layout_marginLeft="@dimen/space_l"
+            android:layout_height="@dimen/space_xxl"
+            style="@style/activity_login_et">
+            <ImageView
+                android:src="@mipmap/ic_head"
+                style="@style/activity_login_img"/>
+            <LinearLayout
+                android:background="@drawable/edit_text_bg"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/et_name_msg"
+                    android:hint="@string/str_hint_login_phoneNumber"
+                    android:inputType="textPhonetic"
+                    style="@style/activity_login_et" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="@color/colorWhite"
+            android:layout_marginTop="@dimen/space_m"
+            android:layout_marginRight="@dimen/space_l"
+            android:layout_marginLeft="@dimen/space_l"
+            android:layout_height="@dimen/space_xxl"
+            style="@style/activity_login_et">
+            <ImageView
+                android:src="@mipmap/ic_lock"
+                style="@style/activity_login_img"/>
+            <LinearLayout
+                android:background="@drawable/edit_text_bg"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/et_name"
+                    android:hint="@string/str_hint_login_password"
+                    android:inputType="textPhonetic"
+                    style="@style/activity_login_et" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/space_m"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginLeft="@dimen/space_l"
+                android:layout_weight="1"
+                android:text="@string/str_login_register"
+                style="@style/activity_login_tx"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginRight="@dimen/space_l"
+                android:text="@string/str_login_forger_psd"
+                style="@style/activity_login_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <Button
+            android:layout_marginTop="@dimen/space_m"
+            android:layout_marginLeft="@dimen/space_l"
+            android:layout_marginRight="@dimen/space_l"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/str_login_name"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+    </LinearLayout>
+</LinearLayout>
