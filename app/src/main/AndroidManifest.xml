@@ -24,6 +24,8 @@
 
         </activity>
         <activity android:name=".view.activity.FollowDetailActivity"></activity>
+        <activity android:name=".view.activity.find.GameLeftActivity"/>
+        <activity android:name=".view.activity.find.GameRightActivity"/>
     </application>
 
 </manifest>

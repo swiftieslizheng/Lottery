@@ -1,9 +1,7 @@
 package com.lizheng.lottery.view.activity;
 
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
@@ -12,9 +10,9 @@ import android.widget.TextView;
 import com.lizheng.lottery.R;
 import com.lizheng.lottery.base.BaseActivity;
 import com.lizheng.lottery.base.BaseFragment;
-import com.lizheng.lottery.view.fragment.FindFragment;
+import com.lizheng.lottery.view.fragment.find.FindFragment;
 import com.lizheng.lottery.view.fragment.FollowFragment;
-import com.lizheng.lottery.view.fragment.PersonFragment;
+import com.lizheng.lottery.view.fragment.person.PersonFragment;
 
 import java.util.ArrayList;
 
@@ -79,8 +77,6 @@ public class MainActivity extends BaseActivity {
 
     /**
      * 切换Fragment
-     * @param tempFragment
-     * @param baseFragment
      */
     private void switchFragemnt(BaseFragment fromFragment, BaseFragment nextFragment) {
         if(tempFragment != nextFragment) {

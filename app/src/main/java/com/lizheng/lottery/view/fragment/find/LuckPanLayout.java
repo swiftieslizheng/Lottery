@@ -1,4 +1,4 @@
-package com.lizheng.lottery.view.fragment;
+package com.lizheng.lottery.view.fragment.find;
 
 /**
  * Created by Xie on 2018/3/17.
@@ -13,7 +13,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
 
 import com.lizheng.lottery.utils.Util;
 
@@ -72,8 +71,8 @@ public class LuckPanLayout extends RelativeLayout {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         MinValue = Math.min(screenWidth,screeHeight);
         MinValue -= Util.dip2px(context,10)*2;
-        int width = 610;
-        int height = 610;
+        int width = 650;
+        int height = 650;
         setMeasuredDimension(width,height);
     }
 

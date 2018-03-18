@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:background="@color/colorContent"
+<LinearLayout android:background="@color/colorBackground"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -7,7 +7,7 @@
     xmlns:luckpan="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-        android:background="@color/colorWhite"
+
         android:layout_marginTop="@dimen/space_l"
         android:layout_marginLeft="@dimen/space_xl"
         android:layout_marginRight="@dimen/space_xl"
@@ -24,7 +24,7 @@
         <TextView
             android:layout_marginLeft="@dimen/space_s"
             android:gravity="center_vertical"
-            style="@style/activity_login_tx"
+            style="@style/global_content_style"
             android:text="@string/app_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
@@ -42,6 +42,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/img_game_left"
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
                 android:src="@mipmap/ic_card"
@@ -56,6 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/img_game_right"
                 android:layout_centerVertical="true"
                 android:layout_alignParentLeft="true"
                 android:src="@mipmap/ic_card"
@@ -83,14 +85,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
-                <com.lizheng.lottery.view.fragment.LuckPanLayout
+                <com.lizheng.lottery.view.fragment.find.LuckPanLayout
                     android:id="@+id/luckpan_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:background="@android:color/transparent"
                     >
-                    <com.lizheng.lottery.view.fragment.RotatePan
+                    <com.lizheng.lottery.view.fragment.find.RotatePan
                         android:id="@+id/rotatePan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -108,7 +110,7 @@
                         android:onClick="rotation"
                         android:tag="startbtn"
                         />
-                </com.lizheng.lottery.view.fragment.LuckPanLayout>
+                </com.lizheng.lottery.view.fragment.find.LuckPanLayout>
             </RelativeLayout>
         <!--</ScrollView>-->
 

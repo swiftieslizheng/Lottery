@@ -1,4 +1,4 @@
-package com.lizheng.lottery.view.fragment;
+package com.lizheng.lottery.view.fragment.find;
 
 /**
  * Created by Xie on 2018/3/17.
@@ -30,7 +30,6 @@ import com.lizheng.lottery.R;
 import com.lizheng.lottery.utils.Util;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -278,11 +277,11 @@ public class RotatePan extends View {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                if(((LuckPanLayout)getParent()).getAnimationEndListener()!= null)
+                if(((com.lizheng.lottery.view.fragment.find.LuckPanLayout)getParent()).getAnimationEndListener()!= null)
                 {
-                    ((LuckPanLayout)getParent()).setStartBtnEnable(true);
-                    ((LuckPanLayout)getParent()).setDelayTime(LuckPanLayout.DEFAULT_TIME_PERIOD);
-                    ((LuckPanLayout)getParent()).getAnimationEndListener().endAnimation(queryPosition());
+                    ((com.lizheng.lottery.view.fragment.find.LuckPanLayout)getParent()).setStartBtnEnable(true);
+                    ((com.lizheng.lottery.view.fragment.find.LuckPanLayout)getParent()).setDelayTime(com.lizheng.lottery.view.fragment.find.LuckPanLayout.DEFAULT_TIME_PERIOD);
+                    ((com.lizheng.lottery.view.fragment.find.LuckPanLayout)getParent()).getAnimationEndListener().endAnimation(queryPosition());
                 }
             }
         });
@@ -311,7 +310,7 @@ public class RotatePan extends View {
     @Override
     protected void onDetachedFromWindow() {
         clearAnimation();
-        if(getParent() instanceof LuckPanLayout){
+        if(getParent() instanceof com.lizheng.lottery.view.fragment.find.LuckPanLayout){
             ((LuckPanLayout) getParent()).getHandler().removeCallbacksAndMessages(null);
         }
         super.onDetachedFromWindow();
