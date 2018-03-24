@@ -31,12 +31,14 @@
         />
     <ImageButton
         android:id="@+id/btn_menu"
-        android:layout_alignParentRight="true"
-        android:layout_width="@dimen/space_l"
-        android:layout_height="@dimen/space_l"
-        android:layout_centerInParent="true"
-        android:background="@android:color/transparent"
+        style="@style/title_imagebutton_style"
         android:src="@drawable/ic_menu"
+        android:visibility="gone"
+        />
+    <ImageButton
+        android:id="@+id/btn_person"
+        style="@style/title_imagebutton_style"
+        android:src="@drawable/ic_person"
         android:visibility="gone"/>
 </RelativeLayout>
 </android.support.v7.widget.Toolbar>

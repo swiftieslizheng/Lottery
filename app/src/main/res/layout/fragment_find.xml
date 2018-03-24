@@ -7,7 +7,8 @@
     xmlns:luckpan="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
-
+        android:id="@+id/ll_find_search"
+        android:background="@color/colorWhite"
         android:layout_marginTop="@dimen/space_l"
         android:layout_marginLeft="@dimen/space_xl"
         android:layout_marginRight="@dimen/space_xl"

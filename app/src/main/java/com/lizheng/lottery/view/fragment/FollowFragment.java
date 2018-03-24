@@ -49,21 +49,41 @@ public class FollowFragment extends BaseFragment {
         return view;
     }
 
+    /**
+     * 判断是否显示empty页面
+     */
+    private void isShow() {
+        if(followList.size()>0&& followList!=null){
+            ll_empty_follow.setVisibility(View.GONE);
+            ll_follow.setVisibility(View.VISIBLE);
+
+            //设置适配器
+            mAdapter = new FollowAdapter(getContext(),followList);
+            mAdapter.setItemListener(new FollowAdapter.OnItemClickListener() {
+                @Override
+                public void onClick(View view, int position) {
+                    Intent intent = new Intent(getContext(),FollowDetailActivity.class);
+                    intent.putExtra("isFollowed",true);
+                    startActivity(intent);
+                }
+            });
+            mRecyclerView.setAdapter(mAdapter);
+        }else {
+            ll_follow.setVisibility(View.GONE);
+            ll_empty_follow.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        isShow();
+    }
+
     @Override
     public void initData() {
         followList = new ArrayList<>();
         initFollows();
-        //设置适配器
-        mAdapter = new FollowAdapter(getContext(),followList);
-        mAdapter.setItemListener(new FollowAdapter.OnItemClickListener() {
-            @Override
-            public void onClick(View view, int position) {
-                Intent intent = new Intent(getContext(),FollowDetailActivity.class);
-                startActivity(intent);
-            }
-        });
-        mRecyclerView.setAdapter(mAdapter);
-
     }
 
     private void initFollows() {

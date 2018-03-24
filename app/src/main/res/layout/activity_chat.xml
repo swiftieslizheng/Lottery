@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sj.keyboard.XhsEmoticonsKeyBoard xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ek_bar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/title_bar_layout"/>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/rv_chat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</sj.keyboard.XhsEmoticonsKeyBoard>

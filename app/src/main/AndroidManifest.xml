@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.lizheng.lottery">
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -17,13 +18,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.LoginActivity">
-
-        </activity>
-        <activity android:name=".view.activity.RegisterActivity">
-
-        </activity>
-        <activity android:name=".view.activity.FollowDetailActivity"></activity>
+        <activity android:name=".view.activity.LoginActivity"></activity>
+        <activity android:name=".view.activity.RegisterActivity"></activity>
+        <activity
+            android:name=".view.activity.FollowDetailActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".view.activity.SearchActivity" />
+        <activity
+            android:name=".view.activity.ChatActivity"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".view.activity.GameActivity"
+            android:launchMode="singleTask"/>
         <activity android:name=".view.activity.find.GameLeftActivity"/>
         <activity android:name=".view.activity.find.GameRightActivity"/>
     </application>

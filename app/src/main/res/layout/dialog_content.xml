@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_protest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:layout_marginLeft="@dimen/space_l"
+        android:layout_marginBottom="@dimen/space_m"
+        android:text="@string/str_protest"
+        android:textSize="@dimen/txt_m"
+        android:textColor="@color/colorTitle"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colorContent">
+    </View>
+    <TextView
+        android:id="@+id/tv_dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_m"
+        android:layout_marginBottom="@dimen/space_l"
+        android:layout_marginLeft="@dimen/space_l"
+        android:text="@string/str_unfollowed"
+        android:textSize="@dimen/txt_m"
+        android:textColor="@color/colorTitle"/>
+</LinearLayout>

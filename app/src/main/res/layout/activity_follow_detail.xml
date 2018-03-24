@@ -131,7 +131,8 @@
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/txt_m"
         android:text="@string/str_btn_access"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
     <Button
         android:id="@+id/btn_send_message"
         android:background="@drawable/btn_background"
@@ -142,6 +143,7 @@
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/txt_m"
         android:text="@string/str_btn_send_message"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
 
 </LinearLayout>

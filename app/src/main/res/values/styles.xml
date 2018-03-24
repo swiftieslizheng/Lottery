@@ -45,6 +45,17 @@
         <item name="android:textSize">@dimen/txt_s</item>
         <item name="android:textColor">@color/colorContent</item>
     </style>
+    <!-- ButtomDialog动画的style -->
+    <style name="BottomDialog_Animation">
+        <item name="android:windowEnterAnimation">@anim/translate_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/translate_dialog_out</item>
+    </style>
+    <!-- ButtomDialog的style -->
+    <style name="BottomDialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
     <!--登陆界面的EditText-->
     <style name="activity_login_et">
         <item name="android:textSize">@dimen/txt_m</item>>
@@ -94,4 +105,27 @@
     </style>
 
 
+    <!-- title的ImageButton的style -->
+    <style name="title_imagebutton_style">
+        <item name="android:layout_width">@dimen/space_l</item>
+        <item name="android:layout_height">@dimen/space_l</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">@dimen/space_m</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <!-- 游戏页面底部Button的style -->
+<style name="GameButtomBtn">
+    <item name="android:layout_marginLeft">@dimen/space_m</item>
+    <item name="android:layout_marginRight">@dimen/space_m</item>
+    <item name="android:layout_width">0dp</item>
+    <item name="android:layout_height">wrap_content</item>
+     <item name="android:layout_weight">1</item>
+    <item name="android:background">@drawable/btn_background</item>
+    <item name="android:layout_marginTop">@dimen/space_s</item>
+    <item name="android:layout_marginBottom">@dimen/space_s</item>
+    <item name="android:textColor">@color/colorWhite</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">@dimen/txt_m</item>
+</style>
 </resources>

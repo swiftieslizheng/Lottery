@@ -2,13 +2,18 @@ package com.lizheng.lottery.view.fragment.find;
 
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.lizheng.lottery.R;
+import com.lizheng.lottery.view.activity.SearchActivity;
 
 import com.lizheng.lottery.base.BaseFragment;
 import com.lizheng.lottery.view.activity.find.GameLeftActivity;
@@ -29,11 +34,13 @@ public class FindFragment extends BaseFragment implements LuckPanLayout.Animatio
     private String[] strs ;
     private ImageView img_game_left;
     private ImageView img_game_right;
+    private LinearLayout ll_find_search;
 
     @Override
     public View initView(LayoutInflater inflater, ViewGroup container) {
         view = View.inflate(getContext(), R.layout.fragment_find,null);
         //画转盘的操作
+        ll_find_search = view.findViewById(R.id.ll_find_search);
         strs = getResources().getStringArray(R.array.names);
         luckPanLayout = (LuckPanLayout) view.findViewById(R.id.luckpan_layout);
         luckPanLayout.setAnimationEndListener(this);
@@ -53,6 +60,7 @@ public class FindFragment extends BaseFragment implements LuckPanLayout.Animatio
 
     @Override
     public void initData() {
+        ll_find_search.setOnClickListener(this);
         img_game_left.setOnClickListener(this);
         img_game_right.setOnClickListener(this);
     }
@@ -69,6 +77,10 @@ public class FindFragment extends BaseFragment implements LuckPanLayout.Animatio
                 Intent intent2 = new Intent();
                 intent2.setClass(getContext(), GameRightActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.ll_find_search:
+                Intent intentSearch = new Intent(getContext(), SearchActivity.class);
+                startActivity(intentSearch);
                 break;
             default:
                 break;

@@ -11,6 +11,7 @@
     <color name="colorBackground">#F2F2F2</color>
     <color name="colorBackgroundLine">#535252</color>
     <color name="colorButtonBackground">#3b3b3b</color>
+    <color name="colorBlue">#749fe4</color>
 
     <color name="colorBule">#679ebb</color>
 </resources>

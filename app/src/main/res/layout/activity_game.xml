@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.lizheng.lottery.view.activity.GameActivity">
+
+<LinearLayout
+    android:layout_above="@+id/ll_buttom"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_bar_layout"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_xxl">
+        <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_date"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/txt_deadline"
+        android:layout_marginTop="@dimen/space_xs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/str_deadline"
+        android:textSize="@dimen/txt_m"
+        android:textColor="@color/colorBlack"
+        android:layout_gravity="center"/>
+         </LinearLayout>
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorContent"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlue"
+                android:text="@string/str_rest"
+                android:layout_gravity="center"/>
+            <TextView
+                android:id="@+id/txt_fund"
+                android:layout_marginTop="@dimen/space_xs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_fund"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:layout_marginLeft="@dimen/space_xs"
+        android:layout_marginRight="@dimen/space_xs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_date_now"
+            android:layout_margin="@dimen/space_s_plus"
+            android:text="@string/str_date_now"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txt_game_content"
+            android:text="@string/str_content_game"
+            android:textColor="@color/colorBlue"
+            android:layout_margin="@dimen/space_s_plus"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/btn_push_down"
+            android:layout_margin="@dimen/space_s_plus"
+            android:background="@android:color/transparent"
+            android:src="@mipmap/ic_push_down"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/rv_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</android.support.v7.widget.RecyclerView>
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_buttom"
+        android:background="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_cathectic"
+            android:text="@string/str_cathectic"
+            style="@style/GameButtomBtn"/>
+        <Button
+            android:id="@+id/btn_game_send_message"
+            android:text="@string/str_btn_send_message"
+            style="@style/GameButtomBtn"/>
+    </LinearLayout>
+</RelativeLayout>

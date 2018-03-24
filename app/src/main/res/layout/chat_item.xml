@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:layout_marginTop="@dimen/space_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_date_left"
+            android:background="@drawable/txt_time_background"
+            android:padding="@dimen/space_xs"
+            android:text="2018-03-27"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+<ImageView
+    android:id="@+id/chat_head_sculpture_left"
+    android:src="@mipmap/ic_launcher"
+    android:layout_marginTop="@dimen/space_l"
+    android:layout_marginLeft="@dimen/space_m"
+    style="@style/global_head_sculpture_style"/>
+<TextView
+    android:id="@+id/txt_chat_content_left"
+    android:background="@color/colorWhite"
+    android:layout_marginTop="@dimen/space_xl"
+    android:layout_marginLeft="@dimen/space_m"
+    android:layout_toRightOf="@+id/chat_head_sculpture_left"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/str_chat_content"
+    android:textColor="@color/colorBlack"
+    android:textSize="@dimen/txt_m"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_right"
+        android:layout_marginTop="@dimen/space_s"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_date_right"
+            android:background="@drawable/txt_time_background"
+            android:padding="@dimen/space_xs"
+            android:text="2018-03-27"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/chat_head_sculpture_right"
+            android:src="@mipmap/ic_launcher"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/space_l"
+            android:layout_marginRight="@dimen/space_m"
+            style="@style/global_head_sculpture_style"/>
+        <TextView
+            android:id="@+id/txt_chat_content_right"
+            android:background="@color/colorBlack"
+            android:layout_marginTop="@dimen/space_xl"
+            android:layout_marginRight="@dimen/space_m"
+            android:layout_toLeftOf="@+id/chat_head_sculpture_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_chat_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/txt_m"/>
+    </RelativeLayout>
+</LinearLayout>

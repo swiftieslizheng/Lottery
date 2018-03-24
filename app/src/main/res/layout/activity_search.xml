@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_bar_layout"/>
+
+    <LinearLayout
+        android:layout_margin="@dimen/space_m"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/space_xs"
+            android:layout_width="@dimen/space_xl"
+            android:layout_height="@dimen/space_xl" />
+        <EditText
+            android:id="@+id/et_search_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/str_search"
+            android:textSize="@dimen/txt_m"
+            android:maxLines="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/space_s"
+            android:layout_marginLeft="@dimen/space_s"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_xl" />
+    </LinearLayout>
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/rv_search"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</android.support.v7.widget.RecyclerView>
+</LinearLayout>
