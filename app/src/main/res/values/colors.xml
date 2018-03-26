@@ -12,6 +12,9 @@
     <color name="colorBackgroundLine">#535252</color>
     <color name="colorButtonBackground">#3b3b3b</color>
     <color name="colorBlue">#749fe4</color>
+    <color name="colorfirstgame">#b9443f</color>
+    <color name="colorsecondgame">#1e72ea</color>
+    <color name="colorthirdgame">#70a92c</color>
 
     <color name="colorBule">#679ebb</color>
 </resources>

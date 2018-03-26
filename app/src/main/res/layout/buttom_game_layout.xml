@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_introduction"
+            android:layout_alignParentLeft="true"
+            android:text="@string/str_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_min_cathectic"
+            android:layout_toLeftOf="@+id/btn_double_cathectic"
+            android:text="@string/str_min_cathectic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_double_cathectic"
+            android:layout_alignParentRight="true"
+            android:text="@string/str_introduction_possible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/space_xs"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:text="@string/str_cathectic_price"
+        android:textColor="@color/colorWhite"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginRight="@dimen/space_xs"
+        android:layout_marginLeft="@dimen/space_xs"
+        android:background="@color/colorWhite"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="@string/str_cathectic"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</LinearLayout>

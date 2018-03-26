@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="10dp" />
+    <!-- 圆角，你也可以对不同的角设置不同的数值 -->
+<stroke android:color="@color/colorWhite"
+    android:width="@dimen/space_xxs">
+</stroke>
+    <solid android:color="@android:color/transparent" />
+    <!-- 形状的填充色 -->
+</shape>

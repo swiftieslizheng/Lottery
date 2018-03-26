@@ -45,6 +45,10 @@
     <string name="str_rest">余额</string>
     <string name="str_content_game">8+7+7=22(大双）</string>
     <string name="str_cathectic">下注</string>
+    <string name="str_min_cathectic">最小下注</string>
+    <string name="str_double_cathectic">双倍下注</string>
+    <string name="str_introduction_possible">赔率说明</string>
+    <string name="str_cathectic_price">下注金额:</string>
 
     <!--个人中心-->
     <string name="str_person_number">账号:</string>
@@ -52,4 +56,12 @@
     <string name="str_person_about_us">关于软件</string>
     <string name="str_person_install">设置</string>
     <string name="str_person_alter">修改</string>
+
+    <!--游戏内容-->
+    <string name="str_gameTitleTxt">猜数字</string>
+    <string name="str_game3TitleTxt">特殊玩法</string>
+    <string name="str_game2TitleTxt">大小单双</string>
+    <string name="str_gameNumTxt">中奖号码：</string>
+    <string name="str_gameNumContentTxt">[0,1,2,3,4,5]</string>
+
 </resources>
