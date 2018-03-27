@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include layout="@layout/title_bar_layout"/>
+    <GridView
+        android:id="@+id/gv_trend_img"
+        android:numColumns="10"
+        android:verticalSpacing="@dimen/space_xs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </GridView>
+
+</LinearLayout>

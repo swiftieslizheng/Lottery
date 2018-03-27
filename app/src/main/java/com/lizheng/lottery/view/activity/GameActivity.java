@@ -24,6 +24,7 @@ public class GameActivity extends BaseActivity implements View.OnClickListener{
     private Button btn_send_message;
     private ImageButton btn_back;
     private ImageButton btn_person;
+    private ImageButton btn_push_down;
     private TextView tv_title;
 
 
@@ -46,6 +47,7 @@ public class GameActivity extends BaseActivity implements View.OnClickListener{
         btn_send_message = findViewById(R.id.btn_game_send_message);
         btn_back = findViewById(R.id.btn_bcak);
         btn_person = findViewById(R.id.btn_person);
+        btn_push_down = findViewById(R.id.btn_push_down);
         tv_title = findViewById(R.id.txt_title);
 
         btn_back.setVisibility(View.VISIBLE);
@@ -57,6 +59,7 @@ public class GameActivity extends BaseActivity implements View.OnClickListener{
         btn_back.setOnClickListener(this);
         btn_cathectic.setOnClickListener(this);
         btn_send_message.setOnClickListener(this);
+        btn_push_down.setOnClickListener(this);
 
     }
 
@@ -81,6 +84,10 @@ public class GameActivity extends BaseActivity implements View.OnClickListener{
                 startActivity(intent);
                 finish();
                 ActivityController.removeActivity(this);
+                break;
+            case R.id.btn_push_down:
+                Intent intentTrendView = new Intent(this,TrendViewActivity.class);
+                startActivity(intentTrendView);
                 break;
             default:
                 break;

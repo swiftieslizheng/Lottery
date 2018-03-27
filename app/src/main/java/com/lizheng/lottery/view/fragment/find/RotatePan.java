@@ -129,8 +129,8 @@ public class RotatePan extends View {
 
         int MinValue = Math.min(screenWidth,screeHeight);
         MinValue -= Util.dip2px(context,38)*2;
-        int width = 610;
-        int height = 610;
+        int width = 450;
+        int height = 450;
         setMeasuredDimension(width,height);
     }
 

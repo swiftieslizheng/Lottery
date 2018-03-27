@@ -63,5 +63,9 @@
     <string name="str_game2TitleTxt">大小单双</string>
     <string name="str_gameNumTxt">中奖号码：</string>
     <string name="str_gameNumContentTxt">[0,1,2,3,4,5]</string>
+    
+    <!--走势图-->
+    <string name="str_history_trend">查看历史走势图</string>
+
 
 </resources>

@@ -35,6 +35,13 @@
         <activity android:name=".view.activity.find.GameRightActivity" />
         <activity android:name=".view.activity.PopupWindowActivity"
             android:theme="@style/PopupButtomWindow"></activity>
+        <activity android:name=".view.activity.TrendImgActivity">
+
+        </activity>
+        <activity android:name=".view.activity.TrendViewActivity"
+            android:theme="@style/TrendPopupWindow">
+
+        </activity>
     </application>
 
 </manifest>

@@ -17,4 +17,9 @@
     <color name="colorthirdgame">#70a92c</color>
 
     <color name="colorBule">#679ebb</color>
+    <!--走势图的颜色-->
+    <color name="colorBulueTop">#5778fc</color>
+    <color name="colorBulueMiddle">#67c8fc</color>
+    <color name="colorBulueButtom">#65d7c0</color>
+    <color name="colorYellow">#fac734</color>
 </resources>

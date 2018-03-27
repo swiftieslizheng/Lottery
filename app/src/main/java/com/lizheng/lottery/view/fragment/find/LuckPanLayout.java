@@ -71,8 +71,8 @@ public class LuckPanLayout extends RelativeLayout {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         MinValue = Math.min(screenWidth,screeHeight);
         MinValue -= Util.dip2px(context,10)*2;
-        int width = 650;
-        int height = 650;
+        int width = 450;
+        int height = 450;
         setMeasuredDimension(width,height);
     }
 
