@@ -1,5 +1,6 @@
 package com.lizheng.lottery.view.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.Spannable;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -26,12 +28,14 @@ import com.lizheng.lottery.view.adapter.ChatAdapter;
 import com.sj.emoji.DefEmoticons;
 import com.sj.emoji.EmojiBean;
 import com.sj.emoji.EmojiDisplay;
+import com.sj.emoji.EmojiDisplayListener;
 import com.sj.emoji.EmojiSpan;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import sj.keyboard.XhsEmoticonsKeyBoard;
 import sj.keyboard.adpater.EmoticonsAdapter;
@@ -44,7 +48,10 @@ import sj.keyboard.interfaces.EmoticonFilter;
 import sj.keyboard.interfaces.PageViewInstantiateListener;
 import sj.keyboard.utils.EmoticonsKeyboardUtils;
 import sj.keyboard.widget.EmoticonPageView;
+import sj.keyboard.widget.EmoticonSpan;
 import sj.keyboard.widget.FuncLayout;
+
+import static com.sj.emoji.EmojiDisplay.getMatcher;
 
 public class ChatActivity extends BaseActivity implements View.OnClickListener {
     private ImageButton btn_back;
@@ -55,6 +62,7 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
     private RecyclerView mRecyclerView;
     private List<ChatContentBean> chatContentList;
     private String date;
+//    public final static String TAG = "TAG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,11 +105,12 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
 
         mAdapter = new ChatAdapter(chatContentList,this);
         mRecyclerView.setAdapter(mAdapter);
+        btn_person.setOnClickListener(this);
+        btn_back.setOnClickListener(this);
 
         ArrayList<EmojiBean> emojiArray = new ArrayList<>();
         Collections.addAll(emojiArray, DefEmoticons.sEmojiArray);
-        btn_person.setOnClickListener(this);
-        btn_back.setOnClickListener(this);
+
         final EmoticonClickListener emoticonClickListener = new EmoticonClickListener() {
             @Override
             public void onEmoticonClick(Object o, int actionType, boolean isDelBtn) {
@@ -118,6 +127,8 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
                     if (o instanceof EmojiBean) {
                         content = ((EmojiBean) o).emoji;
                     }
+                    //1.获取光标位置
+                    //2.在光标处插入字符
                     int index = ek_bar.getEtChat().getSelectionStart();
                     Editable editable = ek_bar.getEtChat().getText();
                     editable.insert(index, content);
@@ -174,12 +185,27 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
                 .setEmoticonList(emojiArray)
                 .setIPageViewInstantiateItem(pageViewInstantiateListener)
                 .setShowDelBtn(EmoticonPageEntity.DelBtnStatus.LAST)
-                .setIconUri(R.mipmap.icon_add)
+                .setIconUri(R.drawable.item_game_background_unselect)
                 .build();
 
         PageSetAdapter pageSetAdapter = new PageSetAdapter();
         pageSetAdapter.add(xhsPageSetEntity);
         ek_bar.setAdapter(pageSetAdapter);
+
+        ek_bar.getBtnSend().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String msg = ek_bar.getEtChat().getText().toString();
+                ek_bar.getEtChat().setText("");
+                if (!TextUtils.isEmpty(msg)) {
+                    ChatContentBean chatContent = new ChatContentBean(msg,ChatContentBean.TYPE_SEND,date);
+                    chatContentList.add(chatContent);
+                    mAdapter.notifyDataSetChanged();
+
+                    mRecyclerView.smoothScrollToPosition(chatContentList.size()-1);
+                }
+            }
+        });
 
         // add a filter
         ek_bar.getEtChat().addEmoticonFilter(new EmojiFilter());
@@ -212,7 +238,7 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
         public void filter(EditText editText, CharSequence text, int start, int lengthBefore, int lengthAfter) {
             emojiSize = emojiSize == -1 ? EmoticonsKeyboardUtils.getFontHeight(editText) : emojiSize;
             clearSpan(editText.getText(), start, text.toString().length());
-            Matcher m = EmojiDisplay.getMatcher(text.toString().substring(start, text.toString().length()));
+            Matcher m = getMatcher(text.toString().substring(start, text.toString().length()));
             if (m != null) {
                 while (m.find()) {
                     String emojiHex = Integer.toHexString(Character.codePointAt(m.group(), 0));
@@ -220,6 +246,7 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
                 }
             }
         }
+
         private void clearSpan(Spannable spannable, int start, int end) {
             if (start == end) {
                 return;
@@ -230,6 +257,7 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
             }
         }
     }
+
 private void initChatContent(){
         ChatContentBean contentBean1 = new ChatContentBean("在吗？",ChatContentBean.TYPE_RECEIVED,date);
         chatContentList.add(contentBean1);

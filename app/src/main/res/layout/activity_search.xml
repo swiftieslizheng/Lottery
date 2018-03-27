@@ -15,10 +15,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView
+            android:src="@mipmap/ic_search"
             android:layout_gravity="center_vertical"
             android:layout_margin="@dimen/space_xs"
-            android:layout_width="@dimen/space_xl"
-            android:layout_height="@dimen/space_xl" />
+            android:layout_width="@dimen/space_l"
+            android:layout_height="@dimen/space_l" />
         <EditText
             android:id="@+id/et_search_content"
             android:background="@android:color/transparent"

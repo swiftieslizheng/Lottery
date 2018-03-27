@@ -12,7 +12,10 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.lizheng.lottery.R;
 import com.lizheng.lottery.bean.ChatContentBean;
+import com.lizheng.lottery.utils.FilterUtil;
+import com.lizheng.lottery.utils.Util;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -43,14 +46,32 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHodler> {
             holder.rightLayout.setVisibility(View.GONE);
             holder.leftDate.setText(chatContent.getDate());
             Glide.with(mContext).load(chatContent.getImgurl()).into(holder.iv_left);
-            holder.leftContent.setText(chatContent.getContent());
+//            holder.leftContent.setText(chatContent.getContent());
+            disPlayLeftTextView(holder,chatContent);
+
         }else if(chatContent.getType() == ChatContentBean.TYPE_SEND){
             holder.leftLayout.setVisibility(View.GONE);
             holder.rightLayout.setVisibility(View.VISIBLE);
             holder.rightDate.setText(chatContent.getDate());
             Glide.with(mContext).load(chatContent.getImgurl()).into(holder.iv_right);
-            holder.rightContent.setText(chatContent.getContent());
+//            holder.rightContent.setText(chatContent.getContent());
+             disPlayRightTextView(holder,chatContent);
         }
+    }
+
+    /**
+     * 利用spannable对表情进行转码显示
+     * @param holder
+     * @param bean
+     */
+    public void disPlayLeftTextView(ViewHodler holder, ChatContentBean bean) {
+        setContent(holder.leftContent, bean.getContent());
+    }
+    public void disPlayRightTextView(ViewHodler holder, ChatContentBean bean) {
+        setContent(holder.rightContent, bean.getContent());
+    }
+    public void setContent(TextView tv_content, String content) {
+        FilterUtil.spannableEmoticonFilter(tv_content, content);
     }
 
     @Override

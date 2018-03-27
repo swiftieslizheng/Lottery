@@ -15,18 +15,13 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="@dimen/space_xl">
-        <ImageView
-            android:layout_marginLeft="@dimen/space_s"
-            android:layout_gravity="center"
-            android:src="@mipmap/ic_search"
-            android:layout_width="@dimen/space_l"
-            android:layout_height="@dimen/space_l" />
 
         <TextView
+            android:drawableLeft="@mipmap/ic_search"
             android:layout_marginLeft="@dimen/space_s"
             android:gravity="center_vertical"
             style="@style/global_content_style"
-            android:text="@string/app_name"
+            android:text="@string/str_search"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

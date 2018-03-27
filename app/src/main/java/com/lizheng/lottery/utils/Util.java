@@ -6,6 +6,7 @@ package com.lizheng.lottery.utils;
 
 import android.content.Context;
 
+
 /**
  * 描述：
  * 作者：Nipuream
@@ -32,5 +33,6 @@ public class Util {
     public static double changeAngle(double a){
         return a * 180 / Math.PI;
     }
+
 
 }
