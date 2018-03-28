@@ -28,10 +28,10 @@
     android:id="@+id/txt_chat_content_left"
     android:background="@color/colorWhite"
     android:layout_marginTop="@dimen/space_xl"
-    android:layout_marginLeft="@dimen/space_m"
     android:layout_toRightOf="@+id/chat_head_sculpture_left"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:gravity="center"
     android:text="@string/str_chat_content"
     android:textColor="@color/colorBlack"
     android:textSize="@dimen/txt_m"/>
@@ -61,8 +61,8 @@
         <TextView
             android:id="@+id/txt_chat_content_right"
             android:background="@color/colorBlack"
+            android:gravity="center"
             android:layout_marginTop="@dimen/space_xl"
-            android:layout_marginRight="@dimen/space_m"
             android:layout_toLeftOf="@+id/chat_head_sculpture_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

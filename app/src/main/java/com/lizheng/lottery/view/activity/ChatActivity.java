@@ -93,6 +93,8 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(layoutManager);
 
+
+
     }
 
     private void initData() {

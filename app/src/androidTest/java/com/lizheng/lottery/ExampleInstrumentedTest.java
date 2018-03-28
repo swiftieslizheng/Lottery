@@ -3,6 +3,7 @@ package com.lizheng.lottery;
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
+import android.util.Log;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,4 +24,14 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.lizheng.lottery", appContext.getPackageName());
     }
+
+//    @Test
+//    public void getByte(){
+//        String a = "学java";
+//        byte[]  buff = a.getBytes();
+//        int i = buff.length;
+//        System.out.println(i);
+//    }
+
+
 }
